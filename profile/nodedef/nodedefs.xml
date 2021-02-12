@@ -1,0 +1,86 @@
+<nodeDefs>
+    <!-- controller -->
+    <nodeDef id="russound" nodeType="139" nls="ctl">
+        <editors />
+        <sts>
+		<st id="ST" editor="bool" />
+	</sts>
+    <cmds>
+		<sends />
+		<accepts>
+			<cmd id="DISCOVER" />
+        	<cmd id="REMOVE_NOTICES_ALL" />
+        	<cmd id="UPDATE_PROFILE" />
+        	<cmd id="DEBUG">
+            	<p id="" editor="DEBUG" init="10"/>
+        	</cmd>
+		</accepts>
+	</cmds>
+    </nodeDef>
+
+    <nodeDef id="zone" nodeType="139" nls="zone">
+        <editors />
+        <sts>
+		<st id="ST" editor="power" />
+		<st id="GV0" editor="source" />
+		<st id="SVOL" editor="vol" />
+		<st id="GV2" editor="zone_info" />
+		<st id="GV3" editor="zone_info" />
+		<st id="GV4" editor="zone_info" />
+		<st id="GV5" editor="power" />
+		<st id="GV6" editor="power" />
+		<st id="GV7" editor="power" />
+		<st id="GV8" editor="power" />
+		<st id="GV9" editor="power" />
+		<st id="GV10" editor="power" />
+	</sts>
+    <cmds>
+		<sends>
+			<cmd id="DON" />
+			<cmd id="DOF" />
+			<cmd id="DIM" /> <!-- minus -->
+			<cmd id="BRT" /> <!-- plus -->
+			<cmd id="GV12" /> <!-- volup -->
+			<cmd id="GV13" /> <!-- voldown -->
+			<cmd id="GV14" /> <!-- source -->
+			<cmd id="GV15" /> <!-- rev -->
+			<cmd id="GV16" /> <!-- fwd -->
+			<cmd id="GV17" /> <!-- play -->
+			<cmd id="GV18" /> <!-- f1 -->
+			<cmd id="GV19" /> <!-- f2 -->
+		</sends>
+		<accepts>
+			<cmd id="VOLUME">
+            	<p id="" editor="vol" init="SVOL" />
+			</cmd>
+			<cmd id="SOURCE">
+            	<p id="" editor="source" init="GV0" />
+			</cmd>
+			<cmd id="TREBLE">
+            	<p id="" editor="zone_info" init="GV2" />
+			</cmd>
+			<cmd id="BASS">
+            	<p id="" editor="zone_info" init="GV3" />
+			</cmd>
+			<cmd id="BALANCE">
+            	<p id="" editor="balance" init="GV4" />
+			</cmd>
+			<cmd id="LOUDNESS">
+            	<p id="" editor="power" init="GV5" />
+			</cmd>
+			<cmd id="DND">
+            	<p id="" editor="power" init="GV6" />
+			</cmd>
+			<cmd id="PARTY">
+            	<p id="" editor="power" init="GV7" />
+			</cmd>
+			<cmd id="MUTE">
+            	<p id="" editor="power" init="GV8" />
+			</cmd>
+			<cmd id="DFON" />
+			<cmd id="DFOF" />
+		</accepts>
+	</cmds>
+    </nodeDef>
+
+</nodeDefs>

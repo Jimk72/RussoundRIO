@@ -1,0 +1,22 @@
+{
+    "name": "RussoundRIO",
+    "docs": "",
+    "type": "python3",
+    "executable": "russound.py",
+    "install": "install.sh",
+    "description": "Control and status for Russound MCA whole house audio devices",
+    "notice": "see http://www.russound.com for more information",
+    "shortPoll": "5",
+    "longPoll": "60",
+    "profile_version": "1.0.0",
+    "credits": [
+    	{
+    		"title": "RussoundRIO: A node server for Russound MCA Controllers",
+    		"author": "James Knutson and Bob Paauwe",
+    		"version": "1.0.0",
+    		"date": "FEB 8, 2021",
+    		"source": "",
+		"license": ""
+		}
+	]
+}
