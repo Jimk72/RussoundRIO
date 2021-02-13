@@ -12,11 +12,19 @@
     "credits": [
     	{
     		"title": "RussoundRIO: A node server for Russound MCA Controllers",
-    		"author": "James Knutson and Bob Paauwe",
+    		"author": "James Knutson",
     		"version": "1.0.0",
     		"date": "FEB 8, 2021",
-    		"source": "",
-		"license": ""
+    		"source": "https://github.com/Jimk72/RussoundRIO",
+		"license": "https://github.com/Jimk72/RussoundRIO/LICENSE"
+		}
+	  {
+    		"title": "Russound: A node server for Russound Controllers",
+    		"author": "Bob Paauwe",
+    		"version": "1.0.4",
+    		"date": "June 17, 2020",
+    		"source": "https://github.com/bpaauwe/udi-russound-poly",
+		"license": "https://github.com/bpaauwe/udi-russound-poly/LICENSE"
 		}
 	]
 }
