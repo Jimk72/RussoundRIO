@@ -118,8 +118,8 @@ class Controller(polyinterface.Controller):
                     for z in range(int(self.params.get('Zones per Controller'))):
                         self.rio.get_info('C['+str(x+1)+'].Z['+str(z+1)+']', 'all')
                         time.sleep(2)
-                
-                  
+                time.sleep(5)
+                self.rio.get_info('System', 'all')
                
             LOGGER.info('Node server started')
         else:
@@ -174,14 +174,13 @@ class Controller(polyinterface.Controller):
         self.removeNoticesAll()
 
     def processCommand(self, msg):
-        LOGGER.debug('Processing Command ' + msg)
         if msg != 'S':
             if msg[0] == 'N' or msg[0] == 'S':
                 if msg[2] == 'C' and msg[10] == ']':
                     curZone = 'zone_' +msg[4]+ msg[9]
                     curCommand = msg[12: msg.find('=')]
                     curValue = msg[msg.find('=')+2:-1]
-                    #LOGGER.debug('Zone:' + curZone + ' Command:' + curCommand + ' Value:' + curValue)
+                    LOGGER.debug('From Russound: ' + msg)
                     #Change ON/OFF to 1/0
                     if curValue == 'OFF' : 
                         curValue = 0
