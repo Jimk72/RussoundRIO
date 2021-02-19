@@ -174,6 +174,7 @@ class Controller(polyinterface.Controller):
         self.removeNoticesAll()
 
     def processCommand(self, msg):
+        LOGGER.debug('From Russound: ' + msg)
         if msg != 'S':
             if msg[0:13] == 'N System.time':
                 LOGGER.debug('Russound Time received')
@@ -183,7 +184,6 @@ class Controller(polyinterface.Controller):
                     curZone = 'zone_' +msg[4]+ msg[9]
                     curCommand = msg[12: msg.find('=')]
                     curValue = msg[msg.find('=')+2:-1]
-                    LOGGER.debug('From Russound: ' + msg)
                     #Change ON/OFF to 1/0
                     if curValue == 'OFF' : 
                         curValue = 0
