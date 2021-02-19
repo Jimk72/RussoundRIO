@@ -175,6 +175,9 @@ class Controller(polyinterface.Controller):
 
     def processCommand(self, msg):
         if msg != 'S':
+            if msg[0:13] == 'N System.time':
+                LOGGER.debug('Russound Time received')
+                self.rio.get_info('System', 'status')
             if msg[0] == 'N' or msg[0] == 'S':
                 if msg[2] == 'C' and msg[10] == ']':
                     curZone = 'zone_' +msg[4]+ msg[9]
