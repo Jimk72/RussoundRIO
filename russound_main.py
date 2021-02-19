@@ -47,6 +47,8 @@ class RIOConnection:
         while self.connected:
             try:
                 data = self.sock.recv(4096)
+                if data == b'':
+                    LOGGER.debug('Connection Closed by Russound!')
                 riocmd = data.splitlines()
                 for x in riocmd:
                     processCommand(x.decode())
