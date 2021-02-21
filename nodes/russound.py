@@ -129,7 +129,7 @@ class Controller(polyinterface.Controller):
         pass
 
     def shortPoll(self):
-        pass
+        self.rio.get_info('System', 'status')
 
     def query(self):
         for node in self.nodes:
@@ -174,11 +174,9 @@ class Controller(polyinterface.Controller):
         self.removeNoticesAll()
 
     def processCommand(self, msg):
-        LOGGER.debug('From Russound: ' + msg)
         if msg != 'S':
-            if msg[0:13] == 'N System.time':
-                LOGGER.debug('Russound Time received')
-                self.rio.get_info('System', 'status')
+            if msg[2:4] !='S[':
+                LOGGER.debug('From Russound: ' + msg)
             if msg[0] == 'N' or msg[0] == 'S':
                 if msg[2] == 'C' and msg[10] == ']':
                     curZone = 'zone_' +msg[4]+ msg[9]
