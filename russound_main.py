@@ -40,7 +40,11 @@ class RIOConnection:
 
 
     def Send(self, data):
-        self.sock.send(data.encode())
+        try:
+            self.sock.send(data.encode())
+        except socket.error:
+            LOGGER.debug('Error trying to connect to russound controller.')
+            self.Connect()
 
     # Main loop waits for messages from Russound and then processes them
     def __russound_loop_tcp(self, processCommand):
