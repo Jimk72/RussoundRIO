@@ -6,9 +6,9 @@
     "install": "install.sh",
     "description": "Control and status for Russound MCA whole house audio devices",
     "notice": "see http://www.russound.com for more information",
-    "shortPoll": "5",
+    "shortPoll": "30",
     "longPoll": "60",
-    "profile_version": "1.0.2",
+    "profile_version": "1.0.3",
     "credits": [
     	{
     		"title": "RussoundRIO: A node server for Russound MCA Controllers",
