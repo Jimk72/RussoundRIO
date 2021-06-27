@@ -56,7 +56,7 @@ class RIOConnection:
                 riocmd = data.splitlines()
                 for x in riocmd:
                     try:
-                    processCommand(x.decode())
+                        processCommand(x.decode())
                     except:
                         LOGGER.error('Data received error!')
             except BlockingIOError:
