@@ -55,8 +55,10 @@ class RIOConnection:
                     LOGGER.debug('Connection Closed by Russound!')
                 riocmd = data.splitlines()
                 for x in riocmd:
+                    try:
                     processCommand(x.decode())
-
+                    except:
+                        LOGGER.error('Data received error!')
             except BlockingIOError:
                 LOGGER.info('waiting on data')
                 pass
