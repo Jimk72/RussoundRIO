@@ -8,13 +8,13 @@
     "notice": "see http://www.russound.com for more information",
     "shortPoll": "30",
     "longPoll": "60",
-    "profile_version": "1.0.3",
+    "profile_version": "1.0.4",
     "credits": [
     	{
     		"title": "RussoundRIO: A node server for Russound MCA Controllers",
     		"author": "James Knutson",
-    		"version": "1.0.3",
-    		"date": "FEB 21, 2021",
+    		"version": "1.0.4",
+    		"date": "june 27, 2021",
     		"source": "https://github.com/Jimk72/RussoundRIO",
 		"license": "https://github.com/Jimk72/RussoundRIO/LICENSE"
 		},
